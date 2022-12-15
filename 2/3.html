@@ -8,10 +8,21 @@
 </head>
 <body>
     <script>
-    Array.from(
-    { 
-        length: Math.min(Math.sqrt(N), 100) 
-    }, (n, i) => i + 1);
+    // дизель* генератор
+const ltSqr = function*(n) {
+  const limit = Math.min(100, Math.sqrt(n));
+  let i = 1;
+  while (i <= limit) {
+    yield i++;
+  }
+}
+
+// использование
+let N = 42;
+for (const x of ltSqr(N)) {
+  console.log(x);
+}
+// выведет натуральные от 1 до 6
     </script>
 </body>
 </html>

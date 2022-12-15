@@ -9,18 +9,15 @@
 <body>
     
 <script>
-    {
-           let b = 81;
-           let a = 3;
-           
-           let p = b/a;
+   function isPowerOfThree(num) {
+    while (num % 3 === 0) {
+        num /= 3;
+    }
+    return num === 1;
+    }
 
-           if(p - p == 0) {
-               document.write("YES");
-           }
-           else
-               document.write("NO");
-       }
-       </script>
+    console.log(isPowerOfThree(81));
+    console.log(isPowerOfThree(126));
+</script>
 </body>
 </html>
